@@ -6,7 +6,7 @@ The app can create random password in React framework  <br>
 
 ### :camera: Screenshots
 
-![CleanShot 2023-01-12 at 01 11 59](https://user-images.githubusercontent.com/99056343/211872235-84e116b5-4ecf-4286-b5fb-37ba9e4e66c4.gif)
+![CleanShot 2023-02-09 at 09 50 53](https://user-images.githubusercontent.com/99056343/217696543-6975188b-99d7-44a0-8e6e-918635ea2701.gif)
 
 
 ### 🔨 Built With
