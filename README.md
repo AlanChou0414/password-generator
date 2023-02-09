@@ -17,10 +17,3 @@ The app can create random password in React framework  <br>
   <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> 
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> 
 </p>
-
-
-<style>
-  .img-border {
-    border-radius:50%
-  }
-</style>
