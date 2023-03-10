@@ -25,14 +25,14 @@ const App = () => {
   const handleRange = (event: React.ChangeEvent<HTMLInputElement>) => (
     setRange(+(event.target.value))
   )
-  const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCheck = (event: React.ChangeEvent<HTMLInputElement>): void => {
     if (event.target.checked) {
       setCheck(!check)
     } else {
       setCheck(false)
     }
   }
-  const handleCreate = () => {
+  const handleCreate = (): void => {
     const strAry: string[] = str.split('')
     const specialAry: string[] = (str + specialCharacters).split('')
     let result: string = ''
@@ -46,7 +46,7 @@ const App = () => {
     }
     setCreate(result)
   }
-  const handleCopy = () => {
+  const handleCopy = (): void => {
     if (create) {
       setCopyText(true)
       navigator.clipboard.writeText(create)
