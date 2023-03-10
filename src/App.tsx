@@ -12,32 +12,32 @@ import {
   Content,
   CopyButton,
   CopyContent
-} from './components/styled'
+} from './components/styled.tsx'
 
-const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-const specialCharacters = '@#$%^&*/=+?'
+const str: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+const specialCharacters: string = '@#$%^&*/=+?'
 
 const App = () => {
-  const [range, setRange] = useState(5)
-  const [check, setCheck] = useState(false)
-  const [create, setCreate] = useState('')
-  const [copyText, setCopyText] = useState(false)
-  const handleRange = (e) => (
-    setRange(e.target.value)
+  const [range, setRange] = useState<number>(5)
+  const [check, setCheck] = useState<boolean>(false)
+  const [create, setCreate] = useState<string>('')
+  const [copyText, setCopyText] = useState<boolean>(false)
+  const handleRange = (event: React.ChangeEvent<HTMLInputElement>) => (
+    setRange(+(event.target.value))
   )
-  const handleCheck = (e) => {
-    if (e.target.checked) {
+  const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
       setCheck(!check)
     } else {
       setCheck(false)
     }
   }
   const handleCreate = () => {
-    const strAry = str.split('')
-    const specialAry = (str + specialCharacters).split('')
-    let result = ''
+    const strAry: string[] = str.split('')
+    const specialAry: string[] = (str + specialCharacters).split('')
+    let result: string = ''
     for (let i = 0; i < range; i++) {
-      let random = (ref) => Math.floor(Math.random() * ref.length)
+      let random = (ref: string[]) => Math.floor(Math.random() * ref.length)
       if (check) {
         result += specialAry[random(specialAry)]
       } else {
